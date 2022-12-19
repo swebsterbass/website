@@ -1,0 +1,19 @@
+Set border to clear and fill to white.
+To make the star icon, don't use the pen or curve tools.
+Instead, use the star tool.
+Set it to 4 a pointed star.
+I made the outer radius 25 and the inner radius 10.
+Scale horizontally with the selection tool to make the star longer than it is 
+wide.
+Circles for curving the inner corners should appear across from each corner.
+Drag these circles to your liking.
+Use the direct selection tool to select the newly created anchor points closest 
+to the horizontal axis from the smooth out operation.
+Transform these anchors by scaling by 80% along the y-axis.
+It will create excess paths, the final path in your layer should be the final
+path.
+
+Export this image as a jpeg file.
+Use an ico converter website (ike this one https://www.icoconverter.com/) to 
+receive your jpeg image in an ico format.
+https://community.adobe.com/t5/photoshop-ecosystem-discussions/creating-a-favicon-with-photoshop-or-illustrator/m-p/11879662

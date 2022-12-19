@@ -1,0 +1,253 @@
+<!--swebsterbass.com 
+	web hosting: https://html.com/web-hosting/
+-->
+
+<!--in short, we can visualize it as follows: a full website is a program with a
+	raw structure defined via html, dressed up with css and manipulated with 
+	javascript.
+
+	every web page is built in the html dom (document object model).
+	https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API
+	https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+	hypertext is text that link you to other text.
+
+	why index.html is the industry-wide maning convention
+	https://www.thoughtco.com/index-html-page-3466505
+	https://stackoverflow.com/questions/32408259/why-do-people-name-their-files-index-html
+	https://meaningcannot.com/qa/why-is-it-called-index-html.html
+
+	the very 1st website
+	http://info.cern.ch/
+
+	global attributes
+	global attributes are attributes of html elements that are available to all
+	html elements
+	https://www.w3schools.com/Tags/ref_standardattributes.asp
+-->
+
+<!--everything inside of the html tags will appear in my webpage-->
+<!--backslashes indicate a closing tag -->
+<!--tags on the same "level" are considered to be siblings -->
+
+
+
+
+
+
+<!--tells the web browser the type of this document -->
+<!DOCTYPE html>
+
+<html>
+
+	<!--the head tags are used to contain the page's metadata. the information 
+		contained in this section is mostly meant for search engines and other 
+		computer programs.
+	-->
+	<head>
+		<!--the page name as it will appear at the top of the browser window or 
+			tab.
+		-->
+		<title>
+			spencer
+		</title>
+
+		<!--this is where information about the document is stored (i.e. 
+			character encoding, name (page context), description). meta tags 
+			always go in the <head> element.
+
+			name: attr
+				specifies a name for the metadata.
+			
+			https://www.w3schools.com/tags/tag_meta.asp
+		-->
+		<!--specifies the character encoding-->
+		<meta charset="UTF-8">
+		<!--define a description for my web page-->
+		<meta name="description" content="Spencer Webster-Bass' personal 
+		website. This website is a public-facing source of truth of Spencer 
+		Webster-Bass' past, present, and future projects, experiences, and 
+		thoughts.">
+		<!--specify the author of my web page-->
+		<meta name="author" content="Spencer Webster-Bass">
+		<!--define keywords for search engines-->
+		<meta name="keywords" content="mathematical neuroscience, theoretical 
+		neuroscience, computational neuroscience, software engineer, machine 
+		learning engineer">
+		<!--the viewport is the user's visible area of a web page. i should 
+			give all of my webpages the following tag to properly scale my 
+			web page across different device display sizes.
+
+			width=device-width:
+				sets the width of teh page to be the screen-width of the device.
+
+			initial-scale=1.0:
+				sets the initial zoom level when the page is 1st loaded by the 
+				browser.
+
+			for more information on responsive web design (using html and css to
+			automatically resize a website) and the viewport see:
+			https://www.w3schools.com/whatis/whatis_responsive.asp
+			https://www.w3schools.com/css/css_rwd_viewport.asp
+			https://web.dev/responsive-web-design-basics/
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--jQuery
+
+			jQuery is a JavaScript library designed to simplify HTML DOM tree 
+			traversal and manipulation, as well as event handling, CSS 
+			animation, and Ajax. It is free, open-source software using the 
+			permissive MIT License. As of Aug 2022, jQuery is used by 77% of the
+			10 million most popular websites. Web analysis indicates that it is 
+			the most widely deployed JavaScript library by a large margin, 
+			having at least 3 to 4 times more usage than any other JavaScript 
+			library
+			https://en.wikipedia.org/wiki/JQuery
+
+			there are several ways to start using jQuery on your website:
+			1. download the jQuery library from jQuery.com
+			2. include jQuery from a CDN (content delivery network), like Google
+			https://www.w3schools.com/jquery/jquery_get_started.asp
+
+			content delivery network
+			https://en.wikipedia.org/wiki/Content_delivery_network
+		-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+
+		<!--link element
+
+			specifies the relationship between the current document and an 
+			external resource.
+
+			rel: attr
+				relationship
+				the value of this attribute denotes how the item being linked to
+				is related to the containing document.
+				to link an external stylesheet, include the link element inside 
+				of the head element.
+
+				list of relationship enums:
+				https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types
+
+			href: attrs
+				path to external resource.
+
+			type: attr
+				the Media Type (formerly known as MIME type) of the external 
+				resource.
+				official list of all Media Types maintained by IANA:
+				https://www.iana.org/assignments/media-types/media-types.xhtml
+		-->
+		<link rel="stylesheet" type="text/css" href="index.css">
+
+	</head>
+
+	<!--body element
+		
+		the body tags delimit where the content of the page is encoded.
+		there can only be 1 body element in a document.
+		
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+	-->
+	<body>
+
+		<!--the header tag represents introductory content (i.e. logo, search 
+			form, author name, and other elements)
+		-->
+		<header>
+			<!--the <img> (image) tag
+
+				src: attr
+					where to find the image.
+
+				alt: attr
+					image description that helps make your site more accessible
+					for visually impaired visitors and to ensure that your site 
+					is ranked correctly.
+
+				height: attr
+					the display height of the image.
+
+				width: attr
+					the display width of the image.
+			-->
+			
+			<!--logo-->
+			<img id="logo" src="assets/favicon/favicon.jpg" alt="spencer's website's logo">
+			
+			<!--the nav keyword does not change anything about how the code is 
+				viewed. it simply makes it easier for other programmers to read 
+				and for google bots to parse a webpage so that it can display 
+				relevant information in a google search
+			-->
+			<!--the <ul> (unordered list) tag
+				default formatting puts the items in a bullet list.
+				each element of the list is delimited with a <li> (list 
+				item) tag.
+			-->
+			<!--the <a> (anchor) tags
+
+				href: attr
+					the link your web browser will jump to
+					if #, the browser will do nothing when the link is 
+					clicked.
+			-->
+			<!-- <nav>
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="about_me.html">about me</a></li>
+					<li><a href="code.html">code</a></li>
+					<li><a href="#">blog</a></li>
+				</ul>
+			</nav> -->
+		</header>
+
+		<div id="vertical-flexbox">
+
+		</div>
+
+		<!--the <script> tag is used to embed a client-side script. the <script>
+			element eithe rcontains scripting statements, or it points to an 
+			external script file through the src attribute.
+			https://www.w3schools.com/Tags/tag_script.asp
+		-->
+		<canvas id="starry_night_background"></canvas>
+		<script type="text/javascript" src="starry_night_background.js"></script>
+		
+		<!--div (division) tag
+			the <div> tag defines a division or a section in an html document.
+			the <div> tag is used as a container for html elements.
+			any sort of content can be put inside of the <div> tags.
+			this container can then be styled with css or manipulated with 
+			javascript.
+
+			https://www.w3schools.com/Tags/tag_div.asp
+
+			the <div> element and the <p> element only have a semantic 
+			difference. <div> is designed to descrie a container of data whereas
+			<p> element is designed to describe a paragraph of content.
+
+			https://stackoverflow.com/questions/2226562/what-is-the-difference-between-p-and-div
+		-->
+		<div id="console"></div>
+		<script type="text/javascript" src="index.js"></script>
+
+		<!--TODO: modify how you receive emails by not having your email public
+			for bots scraping the web to take and spam you. instead have some 
+			form of contact form.
+			https://www.tutorialspoint.com/html/html_email_links.htm
+		-->
+
+		<!--canvas
+			https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas
+
+			rescaling pixel art
+			https://developer.mozilla.org/en-US/docs/Games/Techniques/Crisp_pixel_art_look
+		-->
+		<canvas id="starry_night_background"></canvas>
+		<script type="text/javascript" src="starry_night_background.js"></script>
+
+		<footer>c 2023 My Site</footer>
+	</body>
+</html>

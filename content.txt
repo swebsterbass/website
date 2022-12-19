@@ -1,0 +1,56 @@
+<!--this content will be injceted into index.html at the div with id "console"
+-->
+
+<span id="a">entity0@swebsterbass</span>:<span id="b">~</span><span id="c">$</span> cd CodeNerve/About_Us
+<span id="a">entity0@swebsterbass</span>:<span id="b">~</span><span id="c">$</span> cat codenerve.txt
+
+<!--create a new paragraph
+
+    within the paragraph tags, you can modify text with the following 
+    tags:
+    <b>: bold
+        highlight important information
+    <strong>: strong
+        highlight important information
+    <i>: italics
+        italicize text
+    <em>: emphasized text
+        usually used as image captions
+    <mark>: marked text
+        highlight the background of the text
+    <small>: small text
+        shrink the text
+    <strike>: strike out text
+        place a horizontal line across the text
+    <u>: underlined text
+        highlights links or text
+    <ins>: inserted text
+        displayed with an underline to show an inserted text
+    <sub>: subscript text
+        typographical stylistic choice
+    <sup>: superscript text
+        typographical stylistic choice
+-->
+<p>
+welcome to spencer webster-bass' webpage. this page is spencer' public-facing window into who he is. please explore to learn more about him.
+</p>
+
+<p>
+One of my favorite quotes, "<span id="k">I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.</span>".
+- Albert Einstein, 1929
+</p>
+
+<p>You can introduce yourself here.</p> <!-- ksjdokhdfgdufdfkjhfkjahdfkjhafkjhakf -->
+<p> You can also tell what you've worked and known and what skills you have, you can also give link to your professional portfolio here<a href="link"> portfolio</a>.</p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+<p>Tell more about yourself. <br><br><br>Give your project links or something like that. <a href="link"> Here you go</a>.</p><!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
+<p>
+    you can also find me here:
+    <a href="https://github.com/swebsterbass">github</a>
+    <a href="https://www.linkedin.com/in/spencer-webster-bass/">linkedin</a>
+</p>
+
+Feel free to send me an email at <a href="mailto: swebsterbass@gmail.com">swebsterbass@gmail.com</a>.
+
+<p>Cheers!</p>
+
+<span id="a">entity0@swebsterbass</span>:<span id="b">~</span><span id="c">$</span>

@@ -1,0 +1,158 @@
+Links
+Creating your 1st HTML Website
+https://html.com/#Creating_Your_First_HTML_Webpage
+
+How to create a web form
+https://html.com/forms/
+
+For the error that I keep seeing about source maps:
+https://stackoverflow.com/questions/61339968/error-message-devtools-failed-to-load-sourcemap-could-not-load-content-for-chr
+https://developer.chrome.com/blog/sourcemaps/
+
+cache busting
+eb browsers do cache jaavscript files
+https://stackoverflow.com/questions/3951187/javascript-file-not-updating-no-matter-what-i-do
+https://www.sitefinity-stuff.com/blog/article/sitefinity/2014/08/06/browser-cache-busting-for-your-javascript-files
+https://www.c-sharpcorner.com/article/how-to-force-the-browser-to-reload-cached-js-css-files-to-reflect-latest-chan/#:~:text=This%20is%20because%20those.css%20and.js%20files%20have%20been,new%20changes%20will%20not%20appear%20to%20the%20user.
+
+0.0.0.0 IP
+https://stackoverflow.com/questions/54186651/windows-python-http-server-can-not-be-reached/54186652#54186652
+https://www.lifewire.com/four-zero-ip-address-818384
+
+Setting up HTTPS for your website
+https://www.freecodecamp.org/news/free-https-c051ca570324/
+https://support.google.com/domains/answer/7630973?hl=en
+
+-------------------------------------------------------
+
+Ideas
+Put lives in the top left of your website and make it an interactive game.
+remaining hrts <3 in red
+lost hearts <\3 in gray
+when you lose a life flash on to the screen `hrt--`
+
+A website powered by AI. Instead of statically showing you information about me,
+I want it to seem like you have just accessed my personal AI who is giving you 
+all of my information.
+
+In the blog section of your website, please include the date and time of your 
+posts.
+Instead of a scrollbar, do the border thing that on that website under your references and get rid of the scrollbar.
+have my icon be a black square in the top right corner, but persist even when scrolling like here:
+https://www.jetbrains.com/
+have the user have the option of pulling up a navigational help square with a keystroke. to view again, just press said key again. when this navigational menu is collapsed it can slide down into a little terminal in the bottom right. this navigational menu can also have the menu be assigned to certain keys as well. relying on keystrokes for navigation will probbaly require me to make a mobile friendly accessible version of the webiste. the box containing the nav can be similar to the terminal box in the bottom right of this webiste
+https://www.jetbrains.com/
+to make my website for mobile friendly, i can train an ai to help you navigate my website.
+Eliss Infinity
+Minimalist and retro design of Eliss Infinity.
+https://www.theverge.com/2014/2/6/5385006/play-this-eliss-infinity
+https://www.amazon.com/Finji-Eliss-Infinity/dp/B00MJDQ212
+
+The terminal website tutorial I was following
+https://pradyuman7.github.io/?ref=hackernoon.com
+https://hackernoon.com/how-to-make-a-terminal-like-portfolio-website-for-yourself-27d7a7030004
+https://github.com/CodeNerve/CodeNerve.github.io/blob/master/index.js
+
+terminal like websites
+https://www.jetbrains.com/
+https://itnext.io/how-to-create-interactive-terminal-like-website-888bb0972288
+https://dev.to/m4tt72/i-created-a-terminal-style-website-1jb2
+
+-------------------------------------------------------
+
+In short, we can visualize it as follows: a full website is a program with a raw structure defined via HTML, dressed up with CSS and controlled/manipulated with JavaScript.
+
+Every web page is built in the HTML DOM (Document Object Model). This means that every element in the HTML is an element (or a Node, the mathematical kind - not to be confused with Node.JS). So we could call this paragraph an element in the DOM; the same is true of any of the images and pretty much everything else here.
+
+HyperText is text that will hyperlink you to other text. That's it. Think links.
+
+It is called a Markup Language because HTML is not written as plain text. It is marked up in the form of HTML elements called 'tags.' Tags are denoted by < followed by >. Below is the most basic HTML document we can create (except for the comments that we've added in to make things clearer).
+
+
+
+
+<!-- ########################### SCRATCH ########################### -->
+
+<!--headers:
+	search engine bots use the header level to determine which 
+	informtaion is most important on a page.
+
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+-->
+
+<!--you can write css styling inside of the html file by doing this in 
+	the head tag
+-->
+<!--
+<style type="text/css">
+	body {
+		background: red;
+	}
+</style>
+-->
+
+<!--
+	<img src="https://secure.www.upenn.edu/webservices/logos/2016/shield-only-RGB-4k.png">
+-->
+
+<!-- These are used for styling -->
+<!--
+	<div></div>
+	<span></span>
+-->
+
+<!--
+<div class="row">
+	<div class="col">col1</div>
+	<div class="col">col2</div>
+	<div class="col">col3</div>
+</div>
+-->
+
+<!--
+LISTS
+
+An unordered (bulleted) list
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+An ordered (numbered) list
+<ol>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+
+A definition list
+This simply indents the content of <dd> under <dt>
+<dl>
+	<dt>Item</dt>
+	<dd>the definition goes here</dd>
+</dl>
+-->
+
+<!--
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+-->
+
+<!--HTML Table-->
+<!--
+<table>
+	<tr>
+		<td>Row 1 - Column 1</td>
+		<td>Row 1 - Column 2 </td>
+	</tr>
+	<tr>
+		<td>Row 2 - Column 1</td>
+		<td>Row 2 - Column 2</td>
+	</tr>
+</table>
+-->

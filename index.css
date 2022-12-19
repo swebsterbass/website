@@ -1,0 +1,159 @@
+/* all critical website content should be added to the website using a markup 
+langauge such as html.
+presentation of the website content should be defined by a styling language such
+as css.
+
+a stylesheet is a set of CSS rules used to control the layout and design of a
+webpage or document.
+
+inline styles are specified by using the style attribute of an html element.
+
+internal stylesheets are placed inside a <style> element inside the <head> of a 
+web document.
+
+external stylesheets are placed inside a separate .css file, which is applied to
+a document by referencing the file inside a <link> element in the document's 
+<head> element. external stylesheets are generally preferred because they allow 
+you to control the styling of multiple pages from a single place, rather than 
+having to repeat the css across each page.
+
+https://developer.mozilla.org/en-US/docs/Glossary/stylesheet
+*/
+
+/* css syntax
+CSS syntax includes selectors, properties, values, declarations, declaration blocks, rulesets, at-rules, and statements.
+
+A selector is a code snippet used to identify the web page element or elements that are to be affected by the styles.
+A property is the aspect of the element that is to be affected. For example, color, padding, margin, and background are some of the most commonly used CSS properties.
+A value is used to define a property. For example, the property color might be given the value of red like this: color: red;.
+The combination of a property and a value is called a declaration.
+In many cases, multiple declarations are applied to a single selector. A declaration block is the term used to refer to all of the declarations applied to a single selector.
+A single selector and the declaration block that follows it in combination are referred to as a ruleset.
+At-rules are similar to rulesets but begin with the @ sign rather than with a selector. The most common at-rule is the @media rule which is often used to create a block of CSS rules that are applied based on the size of the device viewing the web page.
+Both rulesets and at-rules are CSS statements.
+
+https://html.com/css/#ixzz7nPPWBGYn
+*/
+
+/* css selector patterns reference
+https://www.w3schools.com/cssref/css_selectors.php
+
+css specificity
+if there are 2 or more css rules that point to the same element, the selector
+with th ehighest specificity value will "win", and its style declaration will be
+applied to that html element.
+specificty hierarchy:
+1. css !important rule (https://www.w3schools.com/css//css_important.asp)
+2. inline styles (i.e. <h1 style="color: pink;">)
+3. ids (i.e. #navbar)
+4. classes, pseudo-classes, attribute selectors (i.e. .test, :hover, [href])
+5. elements and pseudo-elements (i.e. h1, :before)
+https://www.w3schools.com/css/css_specificity.asp
+*/
+
+/* :root selector
+selects the document's root element. in html, the root element is always the 
+html element.
+https://www.w3schools.com/cssref/sel_root.php
+*/
+:root {
+    background-color: #000 !important;
+}
+
+/*
+the body element and all children elements of the the body element will have 
+the following style applied.
+*/
+body {
+    /* 
+    the body has a nonzero value by default
+    https://stackoverflow.com/questions/34550467/why-is-there-a-default-margin-on-the-body-element
+     */
+    margin: 0px;
+    background-color: #000;
+    font-family: courier, monospace;
+    color: #fff; /* font color */
+    /*
+    sets the body element's height to 100% of the viewport's height.
+    https://www.freecodecamp.org/news/html-page-width-height/
+    */
+    min-height: 100vh;
+    /* 
+    css flexbox
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+    */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header{
+    /* 
+    position
+    https://developer.mozilla.org/en-US/docs/Web/CSS/position
+    */
+    position: fixed;
+    width:150px;
+    /*
+    this centers the logo with in its parent element (the header element).
+    https://stackoverflow.com/questions/18428997/center-image-element-in-parent-div
+    */
+    text-align: center;
+}
+
+#logo {
+    /*
+    how to position an image in css
+    https://www.geeksforgeeks.org/how-to-set-position-of-an-image-in-css/
+
+    how to scale an image in css
+    https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
+    */
+    height: 75px;
+    width: 75px;
+}
+
+/* prepend # to the selector to denote that the following string is an
+identifier. */
+#console {
+    width:750px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:100px;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+/* all anchor elements will have the following style applied. */
+a {color: #0bc; text-decoration: none;}
+
+/* the element with its id set to a will have the following style applied. */
+#a {color: #0f0;}
+
+#c {color: #0bc;}
+
+#b {color: #ff0096;}
+
+#k {animation: change 1s;}
+
+#op {color: #888888}
+
+/* at-rules
+at-rules are css statements that instruct css how to behave.
+https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule
+ */
+
+ /* @keyframes
+ 
+the @keyframes css at-rule controls the intermediate steps in a css animation 
+sequence by defining styles for keyframes (or waypoints) along the animation 
+sequence. this gives more control over the intermediate steps of the animation 
+sequence than transitions.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+ */
+/* @keyframes change {
+    0% {color: #0f0;}
+    50% {color: #0f0;}
+    99% {color: black;}
+} */
