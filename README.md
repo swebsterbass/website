@@ -1,0 +1,1 @@
+my own personal-professional website. this is the 1st website that i have ever created. i used html, css, and javascript for the front end. i created all of the assets using adobe illustrator. i hope to also do some back end work in python or javascript to launch an ai.

@@ -35,6 +35,14 @@ A website powered by AI. Instead of statically showing you information about me,
 I want it to seem like you have just accessed my personal AI who is giving you 
 all of my information.
 
+One of the commands you can ask the AI is to play a game:
+user: "let's play a game."
+ai: "you're already playing."
+
+maybe even recreate eliss infinity.
+
+take inspiration from ritsuko and evangelion rebuild.
+
 In the blog section of your website, please include the date and time of your 
 posts.
 Instead of a scrollbar, do the border thing that on that website under your references and get rid of the scrollbar.
@@ -57,6 +65,15 @@ terminal like websites
 https://www.jetbrains.com/
 https://itnext.io/how-to-create-interactive-terminal-like-website-888bb0972288
 https://dev.to/m4tt72/i-created-a-terminal-style-website-1jb2
+
+echo "# website" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:swebsterbass/website.git
+git push -u origin main
+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
 
 -------------------------------------------------------
 
