@@ -39,6 +39,8 @@ One of the commands you can ask the AI is to play a game:
 user: "let's play a game."
 ai: "you're already playing."
 
+music player command with sound visualizer.
+
 maybe even recreate eliss infinity.
 
 take inspiration from ritsuko and evangelion rebuild.

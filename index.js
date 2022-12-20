@@ -71,9 +71,9 @@ var Typer = {
          * from what i have read and seen in the debugger, it is an integer.
          * https://stackoverflow.com/questions/940120/setinterval-settimeout-return-value
          */
-        this.accessCountimer = setInterval(function() {
-            Typer.flipCursor();
-        }, 500);
+        // this.accessCountimer = setInterval(function() {
+        //     Typer.flipCursor();
+        // }, 500);
 
         // this.accessCountimer = setInterval(Typer.flipCursor, 500);
 
@@ -211,13 +211,14 @@ var Typer = {
          * always be 0.0.0.0 or ::
          * https://stackoverflow.com/questions/54186651/windows-python-http-server-can-not-be-reached
          */
-        return $('#console').html();
+        return $('#console-text-label').html();
     },
 
     write: function (str) {
         // append the input string to the console html element.
-        $('#console').append(str);
-        return false;
+        // .append() is a jquery function
+        // https://api.jquery.com/append/#append-content-content
+        $('#console-text-label').append(str);
     },
 
     addText: function (key) {
@@ -242,8 +243,11 @@ var Typer = {
 
             // if the last substring is the cursor, remove it.
             if (cont.substring(cont.length - 1, cont.length) == '|')
-                $('#console').html(
-                    $('#console').html().substring(0, cont.length - 1),
+                // $('#console').html(
+                //     $('#console').html().substring(0, cont.length - 1),
+                // );
+                $('#console-text-label').html(
+                    cont.substring(0, cont.length - 1)
                 );
             if (key.keyCode != 8) {
                 Typer.index += Typer.speed;
@@ -262,7 +266,7 @@ var Typer = {
              */
             var rtn = new RegExp('\n', 'g')
 
-            $('#console').html(text.replace(rtn, '<br/>'));
+            $('#console-text-label').html(text.replace(rtn, '<br/>'));
 
             /**
              * scrolls a window by a certain amount of pixels in the (x, y)
@@ -293,9 +297,10 @@ var Typer = {
         var cont = this.content();
 
         if (cont[cont.length - 1] == '|')
-            $('#console').html(
-                $('#console').html().substring(0, cont.length - 1),
-            );
+            // $('#console').html(
+            //     $('#console').html().substring(0, cont.length - 1),
+            // );
+            $('#console').html(cont.substring(0, cont.length - 1));
         else this.write('|');
         // if (cont[cont.length - 1] == '|') {
         //     $('#console').html(

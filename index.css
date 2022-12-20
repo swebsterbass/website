@@ -51,6 +51,11 @@ specificty hierarchy:
 https://www.w3schools.com/css/css_specificity.asp
 */
 
+/* 
+css units of length
+https://developer.mozilla.org/en-US/docs/Web/CSS/length
+*/
+
 /* :root selector
 selects the document's root element. in html, the root element is always the 
 html element.
@@ -68,23 +73,62 @@ body {
     /* 
     the body has a nonzero value by default
     https://stackoverflow.com/questions/34550467/why-is-there-a-default-margin-on-the-body-element
-     */
+    */
     margin: 0px;
     background-color: #000;
     font-family: courier, monospace;
     color: #fff; /* font color */
+    /* 
+    font size
+    https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+    */
+    font-size: 0.8em;
     /*
     sets the body element's height to 100% of the viewport's height.
     https://www.freecodecamp.org/news/html-page-width-height/
     */
     min-height: 100vh;
-    /* 
-    css flexbox
-    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-    */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+
+/* ========================================================================== */
+/* -------------------------------- SCROLLBAR ------------------------------- */
+/* ========================================================================== */
+/*
+scrollbar style for chrome, edge, and safari
+
+you must 1st use the vendor preix pseudo-element -webkit-scrollbar for the other
+2 vendor prefix pseudo-elements to work.
+
+firefox will ignore this selector since it does not recognize -webkit-scrollbar
+
+https://www.digitalocean.com/community/tutorials/css-scrollbars
+https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+*/
+body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: black; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(66, 66, 66); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    /* a line style of transparent will cause there to be no border around the 
+    thumb, unlike the solid line style */
+    border: 3px solid black; /* creates padding around scroll thumb */
+}
+/*
+scrollbar style for firefox
+
+chrome, edge, and safari will ignore these statements since they do not support
+these properties
+
+https://www.digitalocean.com/community/tutorials/css-scrollbars
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars
+*/
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(66, 66, 66) black;
 }
 
 header{
@@ -113,15 +157,72 @@ header{
     width: 75px;
 }
 
+#vertical-flexbox {
+    /* 
+    css flexbox
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+    */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* 
+    overflow-x
+    https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x
+    */
+    overflow-x: hidden;
+}
+
 /* prepend # to the selector to denote that the following string is an
 identifier. */
 #console {
-    width:750px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:100px;
-    margin-bottom:25px;
-    font-size:14px;
+    /* width:750px; */
+    width: 80%;
+    /* margin-left:auto;
+    margin-right:auto; */
+    /* by using percentages instead of auto, the ratio between the width and 
+    margins is maintained even when the screen is resized. */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+input {
+    background-color: #000;
+    font-family: courier, monospace;
+    color: #fff; /* font color */
+    font-size: 0.8em;
+    border-style: none;
+
+    /* writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial; */
 }
 
 /* all anchor elements will have the following style applied. */
@@ -157,3 +258,35 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
     50% {color: #0f0;}
     99% {color: black;}
 } */
+
+#lives {
+    color: red;
+    text-align: center;
+    position: fixed;
+    width: 6em;
+    height: 1em;
+    top: 0vh;
+    right: 10vw;
+    background-color: rgb(15, 15, 15);
+    padding: 1em;
+    margin: 0em;
+}
+
+#help {
+    /*
+    different vales for position
+    https://stackoverflow.com/questions/62242802/how-do-i-create-an-html-element-that-remains-on-the-page-and-is-unaffected-by-sc
+    */
+    position: fixed;
+    width: 30vw;
+    height: 30vh;
+    bottom: 0vh;
+    right: 10vw;
+    background-color: rgb(15, 15, 15);
+    /*
+    padding is the space between the element's conetent and its border
+    https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+    */
+    padding: 1em;
+    margin: 0em;
+}
